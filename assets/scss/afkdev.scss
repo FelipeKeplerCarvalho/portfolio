@@ -4,26 +4,16 @@
 
 :root {
     //	cores - geral
-    --color-1: #5E6282;
-    --color-2: #14183E;
-    --color-3: #212832;
-    --color-4: #DF6951;
-    --color-5: #DFD7F99;
-    --color-6: #DFD7F9;
-
-    //	cores - contact form 7
-    --red-cf7: #f44336;
-    --green-cf7: #8bc34a;
-    --gray-cf7: #c5c5c5;
+    --color-1: #FFF;
+    --color-2: #898CA9;
+    --color-3: #B982FF;
+    --color-4: #FF8282;
+    --color-5: #1A1B23;
 
     //	fontes
-    --font-1: 'Volkhov', serif;
+    --font-1: "Inter", sans-serif;
 }
 
-// Recaptcha
-.grecaptcha-badge {
-    display: none;
-}
 
 //	Geral
 
@@ -96,188 +86,85 @@ html {
 
 // Header
 
-header {
-    position: fixed;
-    width: 100vw;
-    padding: 20px;
+.header-holder {
+    margin-top: 40px;
+    padding: 0px 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-        position: relative;
-        z-index: 999;
-        div {
-            ul {
-                display: flex;
-                gap: 60px;
-                list-style: none;
+.profile-img {
+    background: var(--gradient-main, linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%));
+    width: 150px;
+    height: 150px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 2px;
 
-                li {
-                    color: var(--1st, #212832);
-                    font-family: "Poppins";
-                    font-size: 17px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-            }
-        }
-
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
     }
 }
 
-.menu-header-container {
-    ul {
-        list-style: none;
-
-        li {
-            transition: all ease 0.3s;
-
-            a {
-                text-decoration: none;
-                color: var(--1st, #212832);
-                font-family: "Poppins";
-                font-size: 17px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-
-            &:hover {
-                transform: scale(1.1);
-
-                a {
-                    color: var(--color-4);
-                }
-            }
-        }
-    }
-}
-
-// Footer
-
-footer {
-    .container {
-        display: flex;
-        justify-content: space-between;
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: baseline;
-            gap: 20px;
-
-            span {
-                color: var(--TEXT-CLR, #5E6282);
-                font-family: Poppins;
-                font-size: 13px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 124.5%;
-                max-width: 25ch;
-            }
-        }
-
-        .social-midia {
-
-            .div {
-                display: flex;
-                gap: 20px;
-
-                .icons-holder {
-                    display: flex;
-                    gap: 20px;
-                }
-
-                .app {
-                    span {
-                        color: var(--TEXT-CLR, #5E6282);
-                        font-family: Poppins;
-                        font-size: 20px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 124.5%;
-                        letter-spacing: 0.1px;
-                        margin-bottom: 10px;
-                        text-align: center;
-                        display: block;
-                    }
-
-                    .app-img {
-                        display: flex;
-                        gap: 20px;
-                    }
-                }
-            }
-
-        }
+.description {
+    h2 {
+        font-family: var(--font-1);
+        font-size: 36px;
+        font-weight: 600;
+        color: #fff;
+        margin: 5px 0 7px;
+        line-height: 1.2em;
+        white-space:none ;
     }
 
-    .copy-right {
+    span {
+        font-family: var(--font-1);
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
+        margin: 5px 0;
+        line-height: 1.2em;
+        margin: 10px 0px 16px 0px;
+        line-height: 1.2em;
+        display: block;
+    }
+
+    .cv-download {
+        padding: 15px 20px;
+        color: var(--black-black-100, #FFF);
         text-align: center;
-        margin: 60px 0px 100px 0px;
-
-        span {
-            color: var(--TEXT-CLR, #5E6282);
-            font-family: Poppins;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 124.5%;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        border-radius: 10px;
+        //background: var(--gradient-main, linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%));
+        background: var(--gradient-main, linear-gradient(326deg, #18C8FF 14.89%, #933FFE 85.85%));
+        text-decoration: none;
+        margin-top: 20px;
+        display: block;
+        transition: background-position 1s ease-in-out; 
+        background-size: 200%; /* Define um tamanho maior para movimento suave */
+        background-position: 0%; /* Posição inicial */
+        &:hover{
+            background-position: 100%;
         }
     }
-
-    @media(max-width:991px) {
-        .container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 60px;
-
-            .content {
-                align-items: center;
-            }
-
-            .social-midia {
-                .div {
-                    flex-direction: column;
-                    align-items: center;
-                }
+    .social-midia{
+        margin: 30px 0px 50px 0px;
+        img{
+            transition: all ease 0.3s;
+            &:hover{
+                transform: scale(1.1);
             }
         }
     }
 }
-
-// Menu-mobile
-
-
-header {
-    z-index: 999;
-    .menu-mobile {
-        transform: translate(-100%, 0);
-        transition: all ease 0.3s;
-        height: 100vh;
-        width: 100vw;
-        left: 0;
-        background-color: #ffffff;
-        position: fixed;
-        top: 0px;
-        padding-top: 150px;
-        .menu-header-container {
-            ul {
-                display: flex;
-                flex-direction: column;
-                gap: 50px;
-                align-items: center;
-            }
-        }
-    }
-}
-
-
-.active-menu{
-    transform: translate(0)!important;
-}
-

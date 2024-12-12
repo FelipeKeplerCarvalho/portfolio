@@ -17,3 +17,7 @@
 11/25/24 8:36:19: inicio.scss - parse error: failed at `content: ;` C:\laragon\www\Lading-page-Viagens\wp-content\themes\AFKdev\assets\scss\inicio.scss on line 292, at column 17
 12/01/24 9:05:38: inicio.scss - parse error: failed at `opacity: ;` C:\laragon\www\Lading-page-Viagens\wp-content\themes\AFKdev\assets\scss\inicio.scss on line 553, at column 21
 12/01/24 9:43:57: inicio.scss - parse error: failed at `filter: ;` C:\laragon\www\Lading-page-Viagens\wp-content\themes\AFKdev\assets\scss\inicio.scss on line 568, at column 9
+12/11/24 9:53:23: home.scss - parse error: failed at `.` C:\laragon\www\FelipeKepler\wp-content\themes\AFKdev\assets\scss\home.scss on line 9, at column 5
+12/12/24 12:45:42: home.scss - parse error: failed at `width: ;` C:\laragon\www\FelipeKepler\wp-content\themes\AFKdev\assets\scss\home.scss on line 19, at column 21
+12/12/24 2:13:20: afkdev.scss - unexpected }: failed at `` C:\laragon\www\FelipeKepler\wp-content\themes\AFKdev\assets\scss\afkdev.scss on line 150, at column 0
+12/12/24 2:14:20: afkdev.scss - unexpected }: failed at `` C:\laragon\www\FelipeKepler\wp-content\themes\AFKdev\assets\scss\afkdev.scss on line 150, at column 0
