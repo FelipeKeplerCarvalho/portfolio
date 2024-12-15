@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <section class="page-wraper">
-
+	<?php get_template_part('/parts/home/menu'); ?>
 	<header>
 		<div class="header-holder">
 			<div class="profile-img">
@@ -22,13 +22,8 @@
 		</div>
 	</header>
 
-	<?php get_template_part('/parts/home/menu'); ?>
+
 	<?php get_template_part('/parts/home/carrosel'); ?>
-	<div id="teste">
-
-	</div>
-
-
 
 </section>
 

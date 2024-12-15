@@ -21,3 +21,4 @@
 12/12/24 12:45:42: home.scss - parse error: failed at `width: ;` C:\laragon\www\FelipeKepler\wp-content\themes\AFKdev\assets\scss\home.scss on line 19, at column 21
 12/12/24 2:13:20: afkdev.scss - unexpected }: failed at `` C:\laragon\www\FelipeKepler\wp-content\themes\AFKdev\assets\scss\afkdev.scss on line 150, at column 0
 12/12/24 2:14:20: afkdev.scss - unexpected }: failed at `` C:\laragon\www\FelipeKepler\wp-content\themes\AFKdev\assets\scss\afkdev.scss on line 150, at column 0
+12/15/24 6:08:38: afkdev.scss - parse error: failed at `max-width: 40px` C:\laragon\www\FelipeKepler\wp-content\themes\AFKdev\assets\scss\afkdev.scss on line 252, at column 29
