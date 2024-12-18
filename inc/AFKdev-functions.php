@@ -83,19 +83,19 @@ function labbo_scripts()
 
 	//Fancy Box
 	wp_enqueue_style(
-        'fancybox-css',
-        'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css',
-        array(), // Dependências, se houver
-        null     // Versão (null para evitar cache)
-    );
+		'fancybox-css',
+		'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css',
+		array(), // Dependências, se houver
+		null     // Versão (null para evitar cache)
+	);
 
 	wp_enqueue_script(
-        'fancybox-js',
-        'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js',
-        array(), // Dependências de outros scripts, como jQuery, se necessário
-        null,    // Versão
-        true     // Carrega no footer
-    );
+		'fancybox-js',
+		'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js',
+		array(), // Dependências de outros scripts, como jQuery, se necessário
+		null,    // Versão
+		true     // Carrega no footer
+	);
 
 	//	FONTAWESOME
 	wp_enqueue_style('Font Awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array(), time(), 'all');
@@ -109,6 +109,24 @@ function labbo_scripts()
 	);
 
 	//	ARQUIVOS COMPLEMENTARES
+
+
+	//Perfect scrollBar
+
+	wp_enqueue_script(
+		'perfect-scrollbar',
+		get_template_directory_uri() . '/vendor/perfect-scrollbar/perfect-scrollbar.min.js', // Adicionada a extensão .js
+		[],
+		'1.5.5',
+		true
+	);
+
+	wp_enqueue_style(
+		'perfect-scrollbar',
+		get_template_directory_uri() . '/vendor/perfect-scrollbar/perfect-scrollbar.css',
+		[],
+		'1.5.5'
+	);
 
 	//	Bootstrap
 	// wp_enqueue_style('bootstrap', get_template_directory_uri() . '/vendor/bootstrap/bootstrap.min.css', array(), null, 'all');
@@ -129,12 +147,12 @@ function labbo_scripts()
 	//wp_enqueue_script('labbotheme-footer', get_template_directory_uri() . '/assets/js/footer.js', array('googleapis-jquery'), time(),  true);
 
 	// Swiper CSS via CDN
-    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css', array(), '10.0.4', 'all');
-    
-    // Swiper JS via CDN
-    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array(), '10.0.4', true);
+	wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css', array(), '10.0.4', 'all');
 
-	wp_enqueue_style('labbo-style', get_template_directory_uri() . '/assets/css/afkdev.css', array(), time(), 'all');
+	// Swiper JS via CDN
+	wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array(), '10.0.4', true);
+
+	wp_enqueue_style('labbo-style', get_template_directory_uri() . '/assets/css/afkdev.css', array(), time(), 'all'); //local deixar como time, no servidor colocar sem, por que se n, n vai cacher, dai n vai ficar salvo no navegador da pessoa e toda vez vai ter q ir
 	wp_enqueue_script('labbo-script', get_template_directory_uri() . '/assets/js/afkdev.js', array(), time(), true);
 
 	$template_name = show_template();
@@ -151,14 +169,15 @@ function labbo_scripts()
 add_action('wp_enqueue_scripts', 'labbo_scripts'); // add_action alternatives: wp_enqueue_scripts, get_footer
 
 
-function register_menu(){
+function register_menu()
+{
 	register_nav_menus(
 		array(
-		  'menu-cabecalho' => 'Menu cabecalho',
-		  'menu-rodape' => 'Menu rodape'
+			'menu-cabecalho' => 'Menu cabecalho',
+			'menu-rodape' => 'Menu rodape'
 		)
-	  );
+	);
 }
 
 
-add_action('after_setup_theme','register_menu');
+add_action('after_setup_theme', 'register_menu');

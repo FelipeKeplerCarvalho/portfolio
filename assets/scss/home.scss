@@ -127,7 +127,8 @@
                     font-size: 21px;
                     font-style: normal;
                     color: var(--color-1);
-                    strong{
+
+                    strong {
                         color: var(--color-3);
                     }
                 }
@@ -151,6 +152,19 @@
                         color: var(--color-1);
                     }
                 }
+
+                @media(max-width:1450px) {
+                    flex-direction: column;
+                    gap: 50px;
+
+                    p {
+                        width: 100%;
+                    }
+
+                    ul {
+                        width: 100%;
+                    }
+                }
             }
 
             .jobs {
@@ -165,7 +179,8 @@
                     margin: 50px 0 50px 0px;
                     display: block;
                     position: relative;
-                    &::after{
+
+                    &::after {
                         position: absolute;
                         opacity: 0.45;
                         top: -5px;
@@ -204,6 +219,7 @@
                                 display: flex;
                                 flex-direction: column;
                                 text-align: right;
+
                                 span {
                                     color: var(--color-1);
                                     font-size: 15px;
@@ -213,6 +229,7 @@
                                     font-weight: 600;
                                     position: relative;
                                     width: 38px;
+
                                     &::before {
                                         content: "";
                                         height: 100%;
@@ -277,6 +294,10 @@
         h2 {
             font-size: 85px;
             color: var(--color-1);
+
+            @media(max-width:1173px) {
+                font-size: 65px;
+            }
         }
 
         span {
@@ -287,8 +308,15 @@
             -webkit-text-fill-color: transparent;
             animation: animate-gradient 3.0s linear infinite;
             text-transform: uppercase;
+
+            @media(max-width:1173px) {
+                font-size: 30px;
+            }
         }
 
+        @media(max-width:1563px) {
+            text-align: center;
+        }
 
     }
 }
@@ -304,6 +332,7 @@
 
 #education {
     padding: 60px;
+
     .page-title {
         position: relative;
 
@@ -347,10 +376,12 @@
                 margin: 50px 0 50px 0px;
                 display: block;
                 position: relative;
-                strong{
+
+                strong {
                     color: var(--color-3);
                 }
-                &::after{
+
+                &::after {
                     position: absolute;
                     opacity: 0.45;
                     top: -5px;
@@ -389,6 +420,7 @@
                             display: flex;
                             flex-direction: column;
                             text-align: right;
+
                             span {
                                 color: var(--color-1);
                                 font-size: 15px;
@@ -437,16 +469,18 @@
 
         }
     }
-    .ad-course{
-        .schools-content{
-            ul{
-                li:last-of-type{
-                    border: none!important;
-                    padding: 0!important;
+
+    .ad-course {
+        .schools-content {
+            ul {
+                li:last-of-type {
+                    border: none !important;
+                    padding: 0 !important;
                 }
             }
         }
     }
+
     .techs {
         .techs-title {
             color: #eeeeee;
@@ -458,7 +492,8 @@
             margin: 50px 0 50px 0px;
             display: block;
             position: relative;
-            &::after{
+
+            &::after {
                 position: absolute;
                 opacity: 0.45;
                 top: -5px;
@@ -480,6 +515,7 @@
         .tech-content {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
 
             .tech-item {
                 display: flex;
@@ -544,6 +580,10 @@
                     }
                 }
             }
+
+            @media(max-width:545px) {
+                justify-content: center !important;
+            }
         }
     }
 }
@@ -557,11 +597,98 @@
 
 // Overflow Slide
 
-.swiper-slide{
+.swiper-slide {
     overflow: hidden;
 }
 
 
-   #education{
+#education {
     overflow-y: scroll;
-   }
+}
+
+
+// Portfolio
+
+#porfolio {
+    padding: 60px;
+
+    .page-title {
+        h2 {
+            color: #eeeeee;
+            font-size: 32px;
+            font-family: Poppins, Helvetica, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: 0px;
+            padding-bottom: 50px;
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                width: 30px;
+                height: 30px;
+                background-image: -webkit-repeating-radial-gradient(center center, #18C8FF, #933FFE 1px, transparent 1px, transparent 100%);
+                display: block;
+                background-repeat: repeat;
+                background-size: 10px 10px;
+                background-size: 10px 10px;
+                position: absolute;
+                top: -10px;
+                left: -20px;
+                z-index: -1;
+            }
+        }
+    }
+
+    .portfolio-holder {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 370px));
+        gap: 20px;
+        justify-content: center;
+
+        .project-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px, rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 8px 16px, rgba(0, 0, 0, 0.08) 0px 16px 32px, rgba(0, 0, 0, 0.08) 0px 32px 64px;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            text-decoration: none;
+
+            img {
+                max-width: 100%;
+                height: 200px;
+                object-fit: fill;
+                border-radius: 15px;
+            }
+
+            span {
+                text-decoration: none;
+                font-size: 18px;
+                color: var(--color-1);
+                font-family: var(--font-1);
+                font-weight: 500;
+                text-transform: capitalize;
+
+                margin: 15px 0 15px 0px;
+            }
+
+            p {
+                font-size: 15px;
+                font-family: var(--font-1);
+                font-weight: 400;
+                color: var(--color-1);
+                text-align: center;
+            }
+
+            &:hover {
+                outline: solid 2px var(--color-3);
+            }
+        }
+    }
+}
+
+//barra

@@ -1,0 +1,23 @@
+{
+  "name": "afkdev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeKeplerCarvalho/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeKeplerCarvalho/portfolio/issues"
+  },
+  "homepage": "https://github.com/FelipeKeplerCarvalho/portfolio#readme",
+  "dependencies": {
+    "perfect-scrollbar": "^1.5.6"
+  }
+}

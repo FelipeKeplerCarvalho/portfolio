@@ -1,4 +1,4 @@
-<section id="education" class="swiper-slide">
+<section id="education" class="swiper-slide teste">
     <div class="page-title">
         <h2>Formação</h2>
     </div>
@@ -12,7 +12,7 @@
                             <span>2024</span>
                         </div>
                         <div class="left">
-                            <span>TECNICO EM DESENVOLVIMENTO WEB | 1ª fase | Previsão De Formatura: 12/2026</span>
+                            <span>TÉCNICO EM DESENVOLVIMENTO WEB | 1ª fase | Previsão De Formatura: 12/2026</span>
                         </div>
                     </li>
                     <li>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="techs">
-            <span class="techs-title">Técnologias</span>
+            <span class="techs-title">Tecnologias</span>
             <div class="tech-content">
                 <div class="tech-item">
                     <div class="shadow"></div>
@@ -127,4 +127,7 @@
         </div>
 
     </div>
+
+
+
 </section>
